@@ -28,7 +28,7 @@ def main():
         # print(tweets)
         try:
             TwitterClient().post_tweets(tweets=tweets)
-            time.sleep(15)
+            time.sleep(5)
         except Exception as e:
             print(e)
             pass

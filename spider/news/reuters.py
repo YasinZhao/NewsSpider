@@ -16,7 +16,7 @@ class ReutersSpider:
         response = requests.get(self.base_url)
         # parse html
         soup = BeautifulSoup(response.content, 'html.parser')
-        # print(soup.prettify())
+        print(soup.prettify())
         return soup
 
     def parse_hot_news(self):
@@ -42,3 +42,4 @@ class ReutersSpider:
 
 if __name__ == '__main__':
     res = ReutersSpider().parse_hot_news()
+    print(res)
